@@ -1,38 +1,98 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  /* background-color:whitesmoke; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.counters-container {
+  display: flex;
+  gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.like-button, .dislike-button {
+  font-size: 15px;
+  background-color: white;
+  /* border-radius:10px; */
+  /* gap: 20px; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.movie-container {
+  /* background-color:grey; */
+  width: 340px;
+  /* border-radius: 24px; */
+}
+
+.movie-poster {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.movie-specs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-name {
+  font-size: 30px;
+  margin: 0;
+}
+
+.movie-summary {
+  margin-top: 0;
+  margin-left: 10px;
+  text-align: auto;
+}
+
+.movie-rating {
+  font-size: 20px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-around;
+}
+
+.add-movie-form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+}
+
+.movie-detail-container {
+  max-width: 900px;
+}
+
+.route-container {
+  padding:20px;
+}
+
+.game-box {
+  height:160px;
+  /* width:160px; */
+  background:white;
+  color:black;
+  font-size: 160px;
+  display:flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.game-box:hover {
+  background: lightgray;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.board {
+  /* background:grey ; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+
 }
