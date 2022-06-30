@@ -14,6 +14,8 @@ import { Home } from "./Home";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { TicTacToe } from "./TicTacToe";
+import { EditMovie } from "./EditMovie";
+
 
 function App() {
   const INITIAL_MOVIE_LIST = [
@@ -209,12 +211,8 @@ function App() {
               <Route path="/tic-tac-toe" element={<TicTacToe />} />
               <Route path="/movies" element={<MovieList />} />
               <Route path="/movies/:id" element={<MovieDetails />} />
-              <Route
-                path="/movies/add"
-                element={
-                  <AddMovie movieList={movieList} setMovieList={setMovieList} />
-                }
-              />
+              <Route path="/movies/add" element={<AddMovie />} />
+              <Route path="/movies/edit/:id" element={<EditMovie />} />
             </Routes>
           </section>
 

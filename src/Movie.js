@@ -14,7 +14,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-export function Movie({ movie, id, deleteButton }) {
+export function Movie({ movie, id, deleteButton, editButton }) {
   const [show, setShow] = useState(true);
 
   const paraStyles = {
@@ -62,7 +62,7 @@ export function Movie({ movie, id, deleteButton }) {
       </CardContent>
       <CardActions>
         <Counter />
-        {deleteButton}
+        {deleteButton} {editButton}
       </CardActions>
     </Card>
   );
