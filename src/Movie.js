@@ -22,7 +22,7 @@ export function Movie({ movie, id, deleteButton, editButton }) {
   return (
     <Card
       className="movie-container"
-      style={{ height: "min-content", borderRadius: "25px" }}
+      style={{ height: "min-content", borderRadius: "10px" }}
     >
       <img src={movie.poster} alt={movie.name} className="movie-poster" />
       <CardContent>

@@ -10,12 +10,11 @@ import { AddMovie } from "./AddMovie";
 import { MovieDetails } from "./MovieDetails";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
-import { Home } from "./Home";
+// import { Home } from "./Home";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { TicTacToe } from "./TicTacToe";
 import { EditMovie } from "./EditMovie";
-
 
 function App() {
   const INITIAL_MOVIE_LIST = [
@@ -163,11 +162,11 @@ function App() {
         <div className="App">
           <AppBar position="static">
             <Toolbar>
+              {/* <Button color="inherit" onClick={() => navigate("/")}>
+                Home
+              </Button> */}
               <Button color="inherit" onClick={() => navigate("/")}>
                 Home
-              </Button>
-              <Button color="inherit" onClick={() => navigate("/movies")}>
-                Movies
               </Button>
               <Button color="inherit" onClick={() => navigate("/movies/add")}>
                 Add Movie
@@ -179,6 +178,7 @@ function App() {
                 Tic-Tac-Toe
               </Button>
               <Button
+                style={{ marginLeft: "auto" }}
                 color="inherit"
                 startIcon={
                   mode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />
@@ -186,37 +186,20 @@ function App() {
                 onClick={() => setMode(mode === "light" ? "dark" : "light")}
               >
                 {mode === "light" ? "dark" : "light"}
-                mode
               </Button>
             </Toolbar>
           </AppBar>
-
-          {/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/color-game">Color Game</Link>
-          </li>
-          <li>
-            <Link to="/movies">Movies</Link>
-          </li>
-        </ul>
-      </nav> */}
           <section className="route-container">
             <Routes>
-              <Route path="/" element={<Home />} />
+              {/* <Route path="/" element={<Home />} /> */}
               <Route path="/color-game" element={<AddColor />} />
               <Route path="/tic-tac-toe" element={<TicTacToe />} />
-              <Route path="/movies" element={<MovieList />} />
+              <Route path="/" element={<MovieList />} />
               <Route path="/movies/:id" element={<MovieDetails />} />
               <Route path="/movies/add" element={<AddMovie />} />
               <Route path="/movies/edit/:id" element={<EditMovie />} />
             </Routes>
           </section>
-
-          {/* <AddColor /> */}
         </div>
       </Paper>
     </ThemeProvider>

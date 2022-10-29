@@ -14,7 +14,7 @@ export function MovieDetails() {
   const [movie, setMovie] = useState([]);
   
   const getMovie = () => {
-    fetch(`https://62bad83b7bdbe01d52918a8a.mockapi.io/movielist/${id}`, {
+    fetch(`https://635d01fffc2595be2650be41.mockapi.io/movies/${id}`, {
       method: "GET",
     })
       .then((data) => data.json())

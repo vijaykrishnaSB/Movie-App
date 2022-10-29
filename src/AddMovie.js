@@ -22,7 +22,7 @@ export function AddMovie() {
 
     // setMovieList([...movieList, newMovie]);
 
-    fetch(`https://62bad83b7bdbe01d52918a8a.mockapi.io/movielist`, {
+    fetch(`https://635d01fffc2595be2650be41.mockapi.io/movies`, {
       method: "POST",
       body: JSON.stringify(newMovie),
       headers: { "Content-Type": "application/json" },
