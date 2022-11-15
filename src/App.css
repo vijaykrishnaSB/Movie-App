@@ -58,14 +58,11 @@
 }
 
 .route-container {
-  align-items: center;
-  justify-content: center;
-  display: flex;
+  padding: 20px;
 }
 
 .game-box {
   height:160px;
-  /* background:white; */
   background:transparent;
   color:black;
   font-size: 120px;
@@ -83,10 +80,11 @@
 .board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  max-width: 660px;
 }
 .movie-button {
   border-radius: 10px;
-  width:100px;
+  width:130px;
   height: 40px;
   border: 1px solid rgb(60, 255, 0);
   margin: 20px;
