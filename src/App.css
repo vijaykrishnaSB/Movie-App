@@ -58,27 +58,36 @@
 }
 
 .route-container {
-  padding:20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .game-box {
   height:160px;
-  background:white;
+  /* background:white; */
+  background:transparent;
   color:black;
-  font-size: 160px;
+  font-size: 120px;
   display:flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 2px solid rgb(88, 54, 9);
   cursor: pointer;
 }
 
 .game-box:hover {
-  background: lightgray;
+  background: rgb(151, 200, 176);
 
 }
 .board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: 900px;
+}
+.movie-button {
+  border-radius: 10px;
+  width:100px;
+  height: 40px;
+  border: 1px solid rgb(60, 255, 0);
+  margin: 20px;
 }

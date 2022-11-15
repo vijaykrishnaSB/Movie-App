@@ -66,15 +66,14 @@ function Board() {
         {board.map((val, index) => (
           <GameBox val={val} onPlayerClick={() => handleClick(index)} />
         ))}
-        {winner ? <h2>Winner is: {winner}</h2> : null}
-        <button onClick={restart}>Restart</button>
+        {winner ? <h2>Winner is:- {winner}</h2> : null}
+        <button className="movie-button" onClick={restart}>Restart</button>
       </div>
     </div>
   );
 }
 
 function GameBox({ val, onPlayerClick }) {
-  // const [val, setVal] = useState("");
   const styles = {
     color: val === "X" ? "green" : "red",
   };
